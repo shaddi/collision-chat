@@ -10,4 +10,10 @@ frontend.py has a built-in web server; if you run it on your local machine and p
 
 Note that you can run frontend.py on a separate machine than collider.py: you just specify this in the command line args.
 
-Finally, frontend.py requires web.py to be installed on the machine you're using. The best way to do this is "sudo easy_install web.py", but if you aren't able to do that you can just download and unpack the package from here: http://webpy.org/static/web.py-0.36.tar.gz. Just drop the "web" directory in the same directory as the rest of your files and you're good to go.
+Finally, frontend.py requires web.py to be installed on the machine you're using. The best way to do this is "sudo easy_install web.py", but if you aren't able to do that you can just download and unpack the package from here: http://webpy.org/static/web.py-0.36.tar.gz. Just drop the "web" directory in the same directory as the rest of your files and you're good to go:
+
+$ wget http://webpy.org/static/web.py-0.36.tar.gz
+$ tar xvzf web.py-0.36.tar.gz
+$ mv web.py-0.36/web .
+$ python frontend.py
+
