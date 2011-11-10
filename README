@@ -1,0 +1,13 @@
+This is a simulator for link-layer collisions. Students should be broken into several pairs. Each pair of students will have to exchange some information (i.e., ask/answer specified questions from the other) as quickly as possible. Pairs should not be able to talk to or see each other: the only way for them to exchange messages is through this degenerate chat server.
+
+There are two scripts to run: frontend.py and collider.py. Run frontend.py on a publicly accessible server, and then run collider.py on that same machine. Every five seconds, collider.py will either print out a single message or "COLLISION!" if more than one message was received during that period. For usage information, run:
+
+python collider.py --help
+python frontend.py --help
+
+More details:
+frontend.py has a built-in web server; if you run it on your local machine and point your browser to http://localhost:8080 you'll see a form. Assuming you run this on a publicly accessible machine, your students should be able to visit http://<your machine>:8080 and see the form as well. You should ssh into that machine, and run collider.py. Crank up the font size and throw it on the projector. Now, when your students send a message using the web form, they will eventually show up on the projector for everyone to see. 
+
+Note that you can run frontend.py on a separate machine than collider.py: you just specify this in the command line args.
+
+Finally, frontend.py requires web.py to be installed on the machine you're using. The best way to do this is "sudo easy_install web.py", but if you aren't able to do that you can just download and unpack the package from here: http://webpy.org/static/web.py-0.36.tar.gz. Just drop the "web" directory in the same directory as the rest of your files and you're good to go.
